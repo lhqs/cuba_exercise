@@ -1,0 +1,5 @@
+@import "../produce";
+
+@mixin com_haulmont_cuba {
+  @include produce;
+}

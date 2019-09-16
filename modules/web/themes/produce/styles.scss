@@ -1,0 +1,6 @@
+@import "produce-defaults";
+@import "produce";
+
+.produce {
+  @include produce;
+}
