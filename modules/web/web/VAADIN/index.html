@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>统计信息</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css"/>
     <script type="text/javascript" src="./js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.0.4/echarts.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts.min.js" integrity="sha256-XNiBJGZuErA+MsbKwxuTqNMimobZMsVS79SkTUroRz4=" crossorigin="anonymous"></script> -->
 
 </head>
 <body>
-<div style="width: 300px; margin-top: 140px; margin: auto;">
-    <h1>统计看板</h1>
+<div class="top">
 
-    <div id="loggedInStatus" style="display: none" class="alert alert-success">
-        登陆成功
-    </div>
-    <div id="loginForm">
-        <div class="form-group">
-            <label for="loginField">姓名:</label>
-            <input type="text" class="form-control" id="loginField">
+    <div class="main">
+        <div id="beforePage">
+            <div class="head">统计看板</div>
+            <div id="loginForm">
+                <div class="form-group">
+                    <label for="loginField">姓名:</label>
+                    <input type="text" class="form-control" id="loginField">
+                </div>
+                <div class="form-group">
+                    <label for="passwordField">密码:</label>
+                    <input type="password" class="form-control" id="passwordField">
+                </div>
+                <button type="submit" class="btn btn-default" onclick="login()">提交</button>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="passwordField">密码:</label>
-            <input type="password" class="form-control" id="passwordField">
-        </div>
-        <button type="submit" class="btn btn-default" onclick="login()">提交</button>
     </div>
 
-    <div id="recentOrders" style="display: none">
-        <h2>Orders</h2>
-        <table id="ordersList" width="300">
-            <tr>
-                <th>Description</th>
-                <th>Amount</th>
-            </tr>
-        </table>
+    <div id="mainContent" style="display: none">
+                    
     </div>
+    
 </div>
 </body>
 </html>
