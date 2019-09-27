@@ -4,5 +4,6 @@
         <item screen="tuzhuang_UserInfo.browse"/>
         <item screen="tuzhuang_Device.browse"/>
         <item screen="tuzhuang_StatisticsInfo.browse"/>
+        <item screen="tuzhuang_Product.browse"/>
     </menu>
 </menu-config>

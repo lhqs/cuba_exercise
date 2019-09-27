@@ -53,3 +53,21 @@ create table TUZHUANG_DEVICE (
     primary key (ID)
 )^
 -- end TUZHUANG_DEVICE
+-- begin TUZHUANG_PRODUCT
+create table TUZHUANG_PRODUCT (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    PRODUCT_ID varchar(255) not null,
+    PRODUCT_NAME varchar(255) not null,
+    CREATE_TIME timestamp not null,
+    --
+    primary key (ID)
+)^
+-- end TUZHUANG_PRODUCT

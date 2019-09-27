@@ -7,9 +7,10 @@ import javax.annotation.Nullable;
 
 public enum DeviceStatus implements EnumClass<Integer> {
 
-    RUN(1),
-    STOP(2),
-    BROKEN(3);
+    WORK(1),
+    LEISURE(2),
+    BROKEN(3),
+    REPAIR(4);
 
     private Integer id;
 
