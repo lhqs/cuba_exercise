@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
+        messagesPack="com.fugang.tuzhuang.web.screens.workorder">
+    <data>
+        <instance id="workOrderDc"
+                  class="com.fugang.tuzhuang.entity.WorkOrder"
+                  view="_local">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="workOrderDc">
+            <column width="250px">
+                <textField id="serialField" property="serial"/>
+                <textField id="planNumField" property="planNum"/>
+                <textField id="finishNumField" property="finishNum"/>
+                <dateField id="startTimeField" property="startTime"/>
+                <dateField id="endTimeField" property="endTime"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

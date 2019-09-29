@@ -7,5 +7,6 @@
         <class>com.fugang.tuzhuang.entity.StatisticsInfo</class>
         <class>com.fugang.tuzhuang.entity.Product</class>
         <class>com.fugang.tuzhuang.entity.ProductLine</class>
+        <class>com.fugang.tuzhuang.entity.WorkOrder</class>
     </persistence-unit>
 </persistence>

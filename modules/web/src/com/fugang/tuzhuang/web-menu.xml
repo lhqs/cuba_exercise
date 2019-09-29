@@ -3,6 +3,7 @@
     <menu id="application-tuzhuang" insertBefore="administration">
         <item screen="tuzhuang_UserInfo.browse"/>
         <item screen="tuzhuang_StatisticsInfo.browse"/>
+        <item screen="tuzhuang_WorkOrder.browse"/>
     </menu>
 
     <menu id="application-metadata" insertBefore="administration">

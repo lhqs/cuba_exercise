@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="workOrdersTable"
+        messagesPack="com.fugang.tuzhuang.web.screens.workorder">
+    <data readOnly="true">
+        <collection id="workOrdersDc"
+                    class="com.fugang.tuzhuang.entity.WorkOrder"
+                    view="_local">
+            <loader id="workOrdersDl">
+                <query>
+                    <![CDATA[select e from tuzhuang_WorkOrder e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="workOrdersTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="workOrdersTable"
+                dataLoader="workOrdersDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="workOrdersTable"
+                    width="100%"
+                    dataContainer="workOrdersDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="serial"/>
+                <column id="planNum"/>
+                <column id="finishNum"/>
+                <column id="startTime"/>
+                <column id="endTime"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="workOrdersTable.create"/>
+                <button id="editBtn" action="workOrdersTable.edit"/>
+                <button id="removeBtn" action="workOrdersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
