@@ -2,8 +2,12 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-tuzhuang" insertBefore="administration">
         <item screen="tuzhuang_UserInfo.browse"/>
-        <item screen="tuzhuang_Device.browse"/>
         <item screen="tuzhuang_StatisticsInfo.browse"/>
+    </menu>
+
+    <menu id="application-metadata" insertBefore="administration">
+        <item screen="tuzhuang_Device.browse"/>
         <item screen="tuzhuang_Product.browse"/>
+        <item screen="tuzhuang_ProductLine.browse"/>
     </menu>
 </menu-config>

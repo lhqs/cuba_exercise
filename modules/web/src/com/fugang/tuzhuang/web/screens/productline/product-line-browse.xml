@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="productLinesTable"
+        messagesPack="com.fugang.tuzhuang.web.screens.productline">
+    <data readOnly="true">
+        <collection id="productLinesDc"
+                    class="com.fugang.tuzhuang.entity.ProductLine"
+                    view="_local">
+            <loader id="productLinesDl">
+                <query>
+                    <![CDATA[select e from tuzhuang_ProductLine e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="productLinesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="productLinesTable"
+                dataLoader="productLinesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="productLinesTable"
+                    width="100%"
+                    dataContainer="productLinesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="serial"/>
+                <column id="definition"/>
+                <column id="createTime"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="productLinesTable.create"/>
+                <button id="editBtn" action="productLinesTable.edit"/>
+                <button id="removeBtn" action="productLinesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

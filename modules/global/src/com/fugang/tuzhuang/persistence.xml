@@ -6,5 +6,6 @@
         <class>com.fugang.tuzhuang.entity.Device</class>
         <class>com.fugang.tuzhuang.entity.StatisticsInfo</class>
         <class>com.fugang.tuzhuang.entity.Product</class>
+        <class>com.fugang.tuzhuang.entity.ProductLine</class>
     </persistence-unit>
 </persistence>
