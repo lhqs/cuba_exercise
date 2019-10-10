@@ -6,9 +6,16 @@
     <data>
         <instance id="workOrderDc"
                   class="com.fugang.tuzhuang.entity.WorkOrder"
-                  view="_local">
+                  view="workOrder-with-productList">
             <loader/>
         </instance>
+        <collection id="productLinesDc" class="com.fugang.tuzhuang.entity.ProductLine" view="_minimal">
+            <loader id="productLinesLc">
+                <query>
+                    <![CDATA[select e from tuzhuang_ProductLine e]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -16,6 +23,13 @@
         <form id="form" dataContainer="workOrderDc">
             <column width="250px">
                 <textField id="serialField" property="serial"/>
+                <lookupPickerField id="productLineField" optionsContainer="productLinesDc" property="productLine"/>
+                <pickerField id="productField" property="product">
+                    <actions>
+                        <action id="lookup" type="picker_lookup"/>
+                        <action id="clear" type="picker_clear"/>
+                    </actions>
+                </pickerField>
                 <textField id="planNumField" property="planNum"/>
                 <textField id="finishNumField" property="finishNum"/>
                 <dateField id="startTimeField" property="startTime"/>

@@ -32,7 +32,7 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
-                <column id="productId"/>
+                <column id="productIdss"/>
                 <column id="productName"/>
                 <column id="createTime"/>
             </columns>

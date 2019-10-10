@@ -7,5 +7,6 @@ import com.fugang.tuzhuang.entity.Device;
 @UiDescriptor("device-edit.xml")
 @EditedEntityContainer("deviceDc")
 @LoadDataBeforeShow
+@DialogMode(forceDialog = true)
 public class DeviceEdit extends StandardEditor<Device> {
 }

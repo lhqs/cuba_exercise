@@ -12,6 +12,8 @@
         <property name="remoteServices">
             <map>
                 <entry key="tuzhuang_UserService" value="com.fugang.tuzhuang.service.UserService"/>
+                <entry key="tuzhuang_WorkOrderService" value="com.fugang.tuzhuang.service.WorkOrderService"/>
+                <entry key="tuzhuang_DashboardService" value="com.fugang.tuzhuang.service.DashboardService"/>
             </map>
         </property>
     </bean>

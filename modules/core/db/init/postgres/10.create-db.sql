@@ -64,7 +64,7 @@ create table TUZHUANG_PRODUCT (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    PRODUCT_ID varchar(255) not null,
+    PRODUCT_IDSS varchar(255) not null,
     PRODUCT_NAME varchar(255) not null,
     CREATE_TIME timestamp not null,
     --

@@ -7,5 +7,6 @@ import com.fugang.tuzhuang.entity.StatisticsInfo;
 @UiDescriptor("statistics-info-edit.xml")
 @EditedEntityContainer("statisticsInfoDc")
 @LoadDataBeforeShow
+@DialogMode(forceDialog = true)
 public class StatisticsInfoEdit extends StandardEditor<StatisticsInfo> {
 }

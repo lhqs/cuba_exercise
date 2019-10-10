@@ -6,4 +6,21 @@
             <param name="username" type="java.lang.String"/>
         </params>
     </query>
+
+    <query name="workOrder" entity="tuzhuang_WorkOrder" view="_local">
+<!--        <jpql><![CDATA[select new com.fugang.tuzhuang.entity.WorkOrder(c.serial, c.productLine) from tuzhuang_WorkOrder c where c.serial = :serial]]></jpql>-->
+<!--        <jpql><![CDATA[select c.serial, c.productLine from tuzhuang_WorkOrder c where c.serial = :serial]]></jpql>-->
+        <jpql><![CDATA[SELECT c FROM tuzhuang_workOrder c, tuzhuang_product_line l, tuzhuang_product u where c.product_line_id = l.id and c.product_id = u.id and c.serial = :serial]]></jpql>
+        <params>
+            <param name="serial" type="java.lang.String"/>
+        </params>
+    </query>
+
+
+    <query name="workOrderStatus" entity="tuzhuang_WorkOrder" view="_local">
+        <jpql><![CDATA[select c from tuzhuang_WorkOrder c ]]></jpql>
+    </query>
+    <query name="deviceStatus" entity="tuzhuang_Device" view="_local">
+        <jpql><![CDATA[select c from tuzhuang_Device c ]]></jpql>
+    </query>
 </queries>

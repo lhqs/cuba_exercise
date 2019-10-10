@@ -7,5 +7,6 @@ import com.fugang.tuzhuang.entity.WorkOrder;
 @UiDescriptor("work-order-edit.xml")
 @EditedEntityContainer("workOrderDc")
 @LoadDataBeforeShow
+@DialogMode(forceDialog = true)
 public class WorkOrderEdit extends StandardEditor<WorkOrder> {
 }

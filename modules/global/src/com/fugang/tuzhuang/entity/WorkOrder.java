@@ -17,12 +17,14 @@ public class WorkOrder extends StandardEntity {
     @Column(name = "SERIAL", nullable = false)
     protected String serial;
 
-    @Lookup(type = LookupType.DROPDOWN)
     @ManyToOne(fetch = FetchType.LAZY)
+    @Lookup(type = LookupType.DROPDOWN, actions = {"lookup", "clear"})
     @JoinColumn(name = "PRODUCT_LINE_ID")
     protected ProductLine productLine;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
+    @Lookup(type = LookupType.SCREEN, actions = {"lookup", "clear"})
     @JoinColumn(name = "PRODUCT_ID")
     protected Product product;
 

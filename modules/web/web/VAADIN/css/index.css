@@ -51,7 +51,7 @@ body {
 
 
 .work-process{
-	margin-top: 18%; 
+	margin-top: 12%;
 	font-weight: bolder;
     font-size: 30px;
     color: #2ca4cb;
@@ -60,7 +60,7 @@ body {
 }
 
 .pie-charts {
-	background-color:#FAFAE2;
+	background-color:#FAFAD2;
 	height: 400px; 
 	width: 100%;
 }
@@ -71,25 +71,7 @@ body {
 	width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*/////////////////////////////*/
 
 .title-zone {
     /*font-weight: bolder;*/
@@ -182,7 +164,7 @@ body {
 
 table {
     width: 100%;
-    font-size: .938em;
+    font-size: 1.438em;
     border-collapse: collapse;/*边框会合并为一个单一的边框*/
 }
 th {
@@ -199,3 +181,4 @@ td {
     text-align: center;
     border-bottom:1px solid #ffba54;
 }
+/*///////////////////////////////*/

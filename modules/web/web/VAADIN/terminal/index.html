@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>终端</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./index.css"/>
+    <script type="text/javascript" src="./index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <!-- <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        Date.prototype.format = function(fmt) { 
+             var o = { 
+                "M+" : this.getMonth()+1,                 //月份 
+                "d+" : this.getDate(),                    //日 
+                "h+" : this.getHours(),                   //小时 
+                "m+" : this.getMinutes(),                 //分 
+                "s+" : this.getSeconds(),                 //秒 
+                "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+                "S"  : this.getMilliseconds()             //毫秒 
+            }; 
+            if(/(y+)/.test(fmt)) {
+                    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+            }
+             for(var k in o) {
+                if(new RegExp("("+ k +")").test(fmt)){
+                     fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+                 }
+             }
+            return fmt; 
+        }  
+        function showTime() {
+            // var date = new Date(); //日期对象 
+            // var now = date.getFullYear()+ "-"+ (date.getMonth()+1)+ "-"+date.getDate()+"  ";
+            // now = now + date.getHours()+":" + date.getMinutes()+":" + date.getSeconds();
+            var now = new Date().format("yyyy-MM-dd   hh:mm:ss");
+            document.getElementById("instant").innerHTML  = now;  
+            setTimeout("showTime()",1000);
+        }
+    </script>
+
+</head>
+<body onload="showTime()">
+<div class="top">
+
+    <div id="login" class="login">
+        <div class="title">统计看板</div>
+        <div id="loginForm">
+            <div class="form-group">
+                <label for="loginField">姓名:</label>
+                <input type="text" class="form-control" id="loginField">
+            </div>
+            <div class="form-group">
+                <label for="passwordField">密码:</label>
+                <input type="password" class="form-control" id="passwordField">
+            </div>
+            <button type="submit" class="btn" onclick="login()">提交</button>
+        </div>
+    </div>
+
+
+    <div id="main" style="display: none">
+    <!-- <div id="main"> -->
+        <span class="head-left">日期：<span id='instant'></span> </span>
+        <span class="head-right">姓名： admin</span>
+        <div class="clear-float"></div>
+        <div id="scan">
+           <div class="scan-tip" onclick="scanAction()">请扫描工单</div>
+        </div>   
+        <div id="content" class="content">
+            <div class="left">
+                <img alt="作业指导书" src="./pic/workGuide.png"  width="100%" height="800"/>
+            </div>
+            <div class="right">
+                <div class="work-table">
+                    <div class="item">编号：<span id="item1"></span> </div>
+                    <div class="item">生产线： <span id="item2"></span></div>
+                    <div class="item">产品： <span id="item3"></span></div>
+                    <div class="item">计划数量： <span id="item4"></span></div>
+                    <div class="item">生产数量： <span id="item5"></span></div>
+                    <div class="item">开始日期： <span id="item6"></span></div>
+                    <div class="item">结束日期： <span id="item7"></span></div>
+                </div>
+            </div>
+        </div>          
+    </div>
+    
+</div>
+</body>
+</html>

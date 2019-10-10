@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
 
-    <view entity="tuzhuang_WorkOrder" name="workOrder-with-produceLis" extends="_local">
+    <view entity="tuzhuang_WorkOrder" name="workOrder-with-productList" extends="_base">
+        <property name="productLine" view="_minimal"/>
+        <property name="product" view="_minimal"/>
     </view>
+
+    <!--<view entity="cubetest_Order" name="order-view" extends="_local">
+        <property name="userInfo" view="_minimal"/>
+    </view>-->
 </views>

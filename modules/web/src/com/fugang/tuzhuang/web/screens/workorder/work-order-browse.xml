@@ -6,7 +6,7 @@
     <data readOnly="true">
         <collection id="workOrdersDc"
                     class="com.fugang.tuzhuang.entity.WorkOrder"
-                    view="_local">
+                    view="workOrder-with-productList">
             <loader id="workOrdersDl">
                 <query>
                     <![CDATA[select e from tuzhuang_WorkOrder e]]>
@@ -33,6 +33,8 @@
             </actions>
             <columns>
                 <column id="serial"/>
+                <column id="productLine"/>
+                <column id="product"/>
                 <column id="planNum"/>
                 <column id="finishNum"/>
                 <column id="startTime"/>

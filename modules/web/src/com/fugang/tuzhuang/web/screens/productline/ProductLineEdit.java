@@ -7,5 +7,6 @@ import com.fugang.tuzhuang.entity.ProductLine;
 @UiDescriptor("product-line-edit.xml")
 @EditedEntityContainer("productLineDc")
 @LoadDataBeforeShow
+@DialogMode(forceDialog = true)
 public class ProductLineEdit extends StandardEditor<ProductLine> {
 }

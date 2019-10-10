@@ -1,5 +1,6 @@
 package com.fugang.tuzhuang.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
+@NamePattern("%s|definition")
 @Table(name = "TUZHUANG_PRODUCT_LINE")
 @Entity(name = "tuzhuang_ProductLine")
 public class ProductLine extends StandardEntity {

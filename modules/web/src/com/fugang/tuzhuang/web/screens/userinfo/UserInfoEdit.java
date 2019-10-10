@@ -7,5 +7,7 @@ import com.fugang.tuzhuang.entity.UserInfo;
 @UiDescriptor("user-info-edit.xml")
 @EditedEntityContainer("userInfoDc")
 @LoadDataBeforeShow
+@DialogMode(forceDialog = true)
 public class UserInfoEdit extends StandardEditor<UserInfo> {
+
 }
